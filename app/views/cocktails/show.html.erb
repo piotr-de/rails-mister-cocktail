@@ -1,1 +1,30 @@
-<h1><%= @cocktail.name %></h1>
+<div class="row">
+
+    <div class="img-banner">
+        <%= @cocktail.name %>
+    </div>
+
+</div>
+
+<div class="row justify-content-center py-3">
+
+  <div class="col-4 text-center">
+    <h4>Ingredients</h4>
+        <% @cocktail.doses.each do |dose| %>
+              <%= dose.description %>
+              <%= dose.ingredient.name %>
+              <%= link_to icon("fas", "trash-alt"), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+              <br>
+            <% end %>
+      </div>
+
+  <div class="col-4 text-center">
+    <h4>Add a new ingredient</h4>
+    <% @dose = Dose.new(cocktail_id: @cocktail.id) %>
+            <%= render "doses/ingredient_form" %>
+
+      </div>
+
+
+
+</div>

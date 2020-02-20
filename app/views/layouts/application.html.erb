@@ -13,6 +13,36 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container w-100 border">
+
+  <!-- Banner -->
+
+      <div class="row">
+        <div class="col-6 p-3">
+          <%= link_to root_path do %>
+            <i class="fas fa-cocktail" style="color: rgba(1, 1, 1, 0.5); font-size: 32px;"></i>
+          <% end %>
+        </div>
+        <div class="col-6 text-right p-3">
+          <form action="/" style="display: inline;">
+            <input type="text" name="query" value="<%= params[:query] %>">
+            <input type="submit" class="btn btn-success" value="Search">
+          </form>
+          <%= link_to "New cocktail", new_cocktail_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+
+    <!-- Content -->
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>

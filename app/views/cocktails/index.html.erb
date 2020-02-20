@@ -1,6 +1,13 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
+<% if params[:query] %>
+  <% @cocktails = Cocktail.where("name ILIKE '%#{params[:query]}%'") %>
 <% end %>
 
-<%= link_to "New cocktail", new_cocktail_path %>
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+      <div class="card">
+        <%= cocktail.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
