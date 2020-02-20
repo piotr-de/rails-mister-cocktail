@@ -1,5 +1,12 @@
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :image_url %>
-  <%= f.submit %>
-<% end %>
+<div class="cards-single">
+  <div class="card-show">
+    <h4>Add a new cocktail</h4>
+    <br>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.input :image_url, label: "Image URL" %>
+      <br>
+      <%= f.submit value: "Add", class: "btn btn-primary w-50" %>
+    <% end %>
+  </div>
+</div>

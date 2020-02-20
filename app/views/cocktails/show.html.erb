@@ -6,7 +6,7 @@
 
 <div class="cards">
 
-<% style = "background-image: url(#{@cocktail.image_url}); background-size: cover;" if @cocktail.image_url %>
+<% style = "background-image: url('#{@cocktail.image_url}'); background-size: cover;" if @cocktail.image_url %>
     <div class="card" style="<%= style %>">
         <%= @cocktail.name %>
     </div>
