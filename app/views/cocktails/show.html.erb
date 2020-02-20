@@ -1,14 +1,17 @@
 <div class="row">
 
-    <div class="img-banner">
+
+
+
+
+<div class="cards">
+
+<% style = "background-image: url(#{@cocktail.image_url}); background-size: cover;" if @cocktail.image_url %>
+    <div class="card" style="<%= style %>">
         <%= @cocktail.name %>
     </div>
 
-</div>
-
-<div class="row justify-content-center py-3">
-
-  <div class="col-4 text-center">
+  <div class="card-show">
     <h4>Ingredients</h4>
         <% @cocktail.doses.each do |dose| %>
               <%= dose.description %>
@@ -18,7 +21,7 @@
             <% end %>
       </div>
 
-  <div class="col-4 text-center">
+  <div class="card-show">
     <h4>Add a new ingredient</h4>
     <% @dose = Dose.new(cocktail_id: @cocktail.id) %>
             <%= render "doses/ingredient_form" %>
@@ -26,5 +29,5 @@
       </div>
 
 
-
+</div>
 </div>

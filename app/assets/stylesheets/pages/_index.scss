@@ -5,7 +5,7 @@
   padding: 25px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 25px;
   justify-items: center;
   align-items: center;
 }
@@ -15,7 +15,9 @@
   justify-content: center;
   width: 300px;
   height: 400px;
-  color: rgba(1, 1, 1, 0.75);
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 400;
   background-color: white;
   box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
 }
@@ -26,4 +28,24 @@
   height: 250px;
   align-items: center;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cards-show {
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-show {
+  text-align: center;
+  width: 350px;
+  height: 400px;
+  color: rgba(1, 1, 1, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
+  padding: 10px;
 }

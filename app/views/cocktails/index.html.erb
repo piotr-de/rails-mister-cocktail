@@ -5,7 +5,8 @@
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
-      <div class="card">
+    <% style = "background-image: url(#{cocktail.image_url}); background-size: cover;" if cocktail.image_url %>
+      <div class="card" style="<%= style %>">
         <%= cocktail.name %>
       </div>
     <% end %>
