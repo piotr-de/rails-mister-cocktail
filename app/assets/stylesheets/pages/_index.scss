@@ -8,12 +8,13 @@
   grid-gap: 25px;
   justify-items: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 400;
   a {
     text-decoration: none;
+    transition: all 0.5s ease-in-out;
     &:hover {
       text-decoration: none;
-      font-weight: 700;
+      transform: scale(1.02);
     }
   }
 }
@@ -28,6 +29,7 @@
 }
 
 .card {
+  font-family: Merriweather;
   text-align: center;
   justify-content: center;
   width: 300px;

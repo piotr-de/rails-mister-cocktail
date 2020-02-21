@@ -4,7 +4,7 @@
     <br>
     <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name %>
-      <%= f.input :image_url, label: "Image URL" %>
+      <%= f.input :photo, as: :file, label: "Photo" %>
       <br>
       <%= f.submit value: "Add", class: "btn btn-primary w-50" %>
     <% end %>
