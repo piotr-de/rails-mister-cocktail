@@ -14,17 +14,17 @@
 
   <body>
     <div class="container w-100 border" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87'); background-size: cover;">
-
+    <!-- <div class="container w-100 border"> -->
   <!-- Banner -->
 
-      <div class="row">
+      <div class="row" style="height: 75px; position: sticky; top: 0; z-index: 5; background-color: rgba(1, 1, 1, 0.1); background-size: cover;">
         <div class="col-6 p-3">
           <%= link_to root_path do %>
             <i class="fas fa-cocktail" style="color: rgba(255, 255, 255, 0.75); font-size: 32px;"></i>
           <% end %>
         </div>
         <div class="col-6 p-3">
-          <form action="/" class="form-inline">
+          <form action="/" class="form-inline justify-content-end">
             <div class="form-group">
             <input type="text" name="query" value="<%= params[:query] %>" class="form-control">
             &nbsp;
